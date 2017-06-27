@@ -8,9 +8,27 @@
     <TextureView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textureView"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/textureView" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/videoOnlineImageButton"
+        android:layout_marginStart="57dp"
+        android:contentDescription="@string/camera_button"
+        android:src="@mipmap/btn_camera" />
+
+    <ImageButton
+        android:id="@+id/MediaBrowserButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="Browser"
+        android:src="@drawable/btn_media_browser"
+        android:layout_alignBottom="@+id/imageButton"
+        android:layout_toEndOf="@+id/imageButton"
+        android:layout_marginStart="305dp" />
 
     <ImageButton
         android:layout_width="wrap_content"
@@ -21,17 +39,8 @@
         android:layout_marginBottom="36dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="49dp" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/cameraImageButton2"
-        android:contentDescription="@string/camera_button"
-        android:src="@mipmap/btn_camera"
-        android:layout_alignTop="@+id/videoOnlineImageButton"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="57dp" />
+        android:layout_marginEnd="49dp"
+         />
 
     <Chronometer
         android:layout_width="wrap_content"

@@ -238,6 +238,7 @@ public class Camera2VideoImageActivity extends AppCompatActivity {
 
     private ImageButton mRecordImageButton;
     private ImageButton mStillImageButton;
+    private ImageButton mMediaBrowerButton;
     private boolean mIsRecording = false;
     private boolean mIsTimelapse = false;
 
@@ -318,6 +319,18 @@ public class Camera2VideoImageActivity extends AppCompatActivity {
                 mRecordImageButton.setImageResource(R.mipmap.btn_timelapse);
                 checkWriteStoragePermission();
                 return true;
+            }
+        });
+
+        mMediaBrowerButton = (ImageButton) findViewById(R.id.MediaBrowserButton);
+        mMediaBrowerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!(mIsTimelapse || mIsRecording)) {
+                    checkWriteStoragePermission();
+                }
+                //start browser activity
+
             }
         });
     }
